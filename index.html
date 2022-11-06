@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
+    <script src="script.js" defer></script>
+    <title>Final</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light position-top-fixed container-fluid topbar" style="position: fixed;">
+        <!-- <div class="container-fluid"> -->
+            <a class="navbar-brand" href="#"><img
+                    src="https://thumbs.dreamstime.com/b/letter-logo-design-simple-modern-logo-design-letter-very-simple-black-background-color-183193944.jpg"
+                    alt="" width="30px" height="20px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-3 ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-linkedin"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-instagram"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-facebook"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-github"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="projects" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Projects
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#online-voting">Online Voting System</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#infosongs">InfoSongs</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#portfolio">PortFolio</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="home" class="home">
+        <div class="row about-me">
+            <div class="col-sm-6 mt-5 d-none d-lg-block bg-light left">
+                <div class="image-card">
+                    <img src="programmer.png" alt="" style="width:550px;height: 330px;" class="non-moving">
+                    <img src="programmer.gif" alt="moving" class="moving-image">
+                </div>
+            </div>
+            <div class="col-sm-6 d-sm-block mt-5 p-5 right bg-light">
+                <h1>Welcome, to my Portfolio.</h1>
+                <p><i>(A Front-End Developer based on Lalitpur)</i></p><br>
+                <h3>A Learner, A Enthusiast.</h3>
+
+                <div class="skills">
+                    <img src="https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-html-icons-download-14.png"
+                        alt="">
+                    <img src="https://i.pinimg.com/originals/3c/2a/ad/3c2aadf4b1aeffa2bc631eb2037a2496.jpg" alt="">
+                    <img src="https://www.freepnglogos.com/uploads/javascript-png/javascript-logo-transparent-logo-javascript-images-3.png"
+                        alt="">
+                </div>
+                <h2 style="text-align: right; padding-top:20px">-Aniruddha Bishwakarma</h2>
+            </div>
+        </div>
+    </section>
+    <section id="education" class="education bg-dark">
+        <h1><u>Educational Institutions</u></h1>
+        <div class="cards">
+            <div class="card" style="width: 18rem;">
+                <img src="data:image/jpeg;base64,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 "
+                    class="card-img-top" alt="...">
+                <div class="card-body bg-light text-dark">
+                    <p class="card-text text-center">Lalitpur Madhyamik Vidhyalaya</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://www.juksun.com/wp-content/uploads/2021/08/Little-Angels-College-Building.jpg?x47719"
+                    class="card-img-top" alt="...">
+                <div class="card-body bg-light text-dark">
+                    <p class="card-text text-center">Little Angels College</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://pmcecodtu.edu.np/public/uploads/Slider/photo1-64103.JPG" class="card-img-top"
+                    alt="...">
+                <div class="card-body bg-light text-dark">
+                    <p class="card-text text-center">Patan Multiple Campus</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="online-voting" class="online-voting">
+        <div class="voting-panel animate__animated animate__fadeInDown" id="voting">
+            <button class="close-button" id="close-button1" onclick="hide(this)">X</button>
+            <h1 style="text-align: center; padding-top: 10px;">Online Voting System</h1>
+            <p>It is a system used to make voting system online, convenient and secure. This system was made using
+                HTML5, CSS3, BOOTSTRAP5, JAVASCRIPT, PHP, MYSQL.
+                Online voting tools and online election voting systems help you make important decisions by gathering
+                the input of your group in a way that’s systematic and verifiable.
+            </p>
+        </div>
+        <div class="parallax1">
+            <h1>Online Voting System</h1>
+            <button class="bg-dark text-light open-button1" id="open-button1" onclick="visible(this)">Click
+                Here</button><br>
+            <u>To see Description</u>
+        </div>
+    </section>
+    <section id="infosongs" class="infosongs">
+        <div class="music-panel animate__animated animate__fadeInDown" id="music">
+            <button class="close-button" id="close-button2" onclick="hide(this)">X</button>
+            <h1 style="text-align: center; padding-top: 10px;">InfoSongs</h1>
+            <p> It is one of the largest music streaming service providers, with over 456 million monthly active users,
+                including 195 million paying subscribers, as of September 2022.[4][8] Spotify is listed (through a
+                Luxembourg City-domiciled holding company, Spotify Technology S.A.[1]) on the New York Stock Exchange in
+                the form of American depositary receipts.
+            </p>
+        </div>
+        <div class="parallax2">
+            <h1>InfoSongs</h1>
+            <button class="open-button2" id="open-button2" onclick="visible(this)">Click Here</button><br>
+            <u>To see Description</u>
+        </div>
+    </section>
+    <section id="portfolio" class="portfolio">
+        <div class="cv-panel animate__animated animate__fadeInDown" id="cv">
+            <button class="close-button" id="close-button3" onclick="hide(this)">X</button>
+            <h1 style="text-align: center; padding-top: 10px;">Porfolio</h1>
+            <p> It is one of the largest music streaming service providers, with over 456 million monthly active users,
+                including 195 million paying subscribers, as of September 2022.[4][8] Spotify is listed (through a
+                Luxembourg City-domiciled holding company, Spotify Technology S.A.[1]) on the New York Stock Exchange in
+                the form of American depositary receipts.
+            </p>
+        </div>
+        <div class="parallax3">
+            <h1>Portfolio</h1>
+            <button class="open-button3" id="open-button3" onclick="visible(this)">Click Here</button><br>
+            <u>To see Description</u>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="row">
+            <div class="col-sm-7 d-none d-lg-block g-0 left">
+                <img src="https://images.prismic.io/alto/de75b7b9-d654-445c-b5b6-51ea401f034e_Biometrics_Overview_fingerprint_Blog.png?auto=compress,format"
+                    alt="">
+                <!-- <h1>Login and Sign-Up</h1>
+                <h3>Connect With Me</h3> -->
+            </div>
+            <div class="col-sm-5 right">
+                <div class="register-panel animate__animated animate__fadeInDown" id="register">
+                    <button class="close-button" id="close-button4" onclick="hide(this)" style>X</button>
+                    <h1 style="text-align: center; padding-top: 10px;">Register Here</h1>
+                    <p><i>(Sign-up here to join on my page and see my work)</i></p>
+                    <hr class="w-75 mb-4" style="margin-left:10%;">
+                    <input type="text" placeholder="Mobile Number or Email">
+                    <input type="text" placeholder="FullName">
+                    <input type="text" placeholder="Username">
+                    <input type="password" placeholder="Password">
+                    <button>Sign up</button>
+                 </div>
+                <div class="form bg-light">
+                    <h2 class="mb-5">Login Form</h2>
+                    <i class="far fa-eye eyes icon" id="togglePassword"></i>
+                    <input type="text" placeholder="Username or Email" class="mb-4 bg-light" id="username" onkeyup="enableSubmit()">
+                    <input type="password" placeholder="Password" id="password" class="mb-4 bg-light">
+                    <button type="button" class="btn btn-primary mb-3" id="submit">Login</button>
+                    <p>OR</p>
+                    <a href="#" class="mb-3"><i class="bi bi-google"></i>Login With Google</a>
+                    <a href="#" style="font-size:11spx">Forgot Password?</a>
+                </div>
+                <div class="reg">
+                    <p>Don't have an account? <a href="#" id="signup" onclick="visible(this);return false;">Sign Up</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer" id="footer">
+        <div class="row bg-light p-3">
+            <div class="col-6">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-telephone-fill"></i> 9864995686</a>
+                    <a href="https://myaccount.google.com/?hl=en" class="list-group-item list-group-item-action"><i class="bi bi-envelope"></i> Aniruddha Bishwakarma</a>
+                    <a href="" class="list-group-item list-group-item-action"><i class="bi bi-geo-alt-fill"></i> Gwarko,Lalipur</a>
+                    <a href="https://github.com/aniruddhabishwakarma" class="list-group-item list-group-item-action"><i class="bi bi-github"></i> Aniruddha Bishwakrma</a>
+                  </div>
+            </div>
+            <div class="col-6">
+                <div class="list-group border-none">
+                    <a href="https://www.facebook.com/profile.php?id=100004808688251" class="list-group-item list-group-item-action"><i class="bi bi-facebook"></i> अनिरुद्ध विश्वकर्मा</a>
+                    <a href="https://www.instagram.com/aniruddha2056/" class="list-group-item list-group-item-action"><i class="bi bi-instagram"></i> aniruddha2056</a>
+                    <a href="https://www.linkedin.com/in/aniruddha-bishwakarma-12b42423a/" class="list-group-item list-group-item-action"><i class="bi bi-linkedin"></i> Aniruddha</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-whatsapp"></i> Aniruddha Bishwakrma</a>
+                  </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
