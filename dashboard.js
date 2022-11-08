@@ -1,18 +1,76 @@
+const users= [{
+  id:1,
+  name:'Aniruddha Bishwakarma',
+  username:'aniruddha123',
+  contact:'9864995686',
+},{
+  id:2,
+  name:'Ramesh Dhami',
+  username:'ramesh123',
+  contact:'9864995686',
+},{
+  id:3,
+  name:'Dinesh Paudel',
+  username:'dinesh123',
+  contact:'9847503434',
+},{
+  id:4,
+  name:'Arun Sharma',
+  username:'arun123',
+  contact:'9840243987',
+},{
+  id:5,
+  name:'Sushant Kc',
+  username:'sushant123',
+  contact:'9860213607',
+},{
+  id:6,
+  name:'Vivek Karki',
+  username:'vivek123',
+  contact:'9860134237',
+},{
+  id:7,
+  name:'Chiranjeet Mandal',
+  username:'chiranjeet123',
+  contact:'9828558126',
+}];
+
 
 const modal= document.getElementById("modal");
 const overlay= document.getElementById("#overlay");
 const registerPanel = document.getElementById("register");
 const approve = document.getElementById("approve1");
 
-const delButton1 = document.getElementById("delete-button1");
-const delButton2 = document.getElementById("delete-button2");
-const delButton3 = document.getElementById("delete-button3");
-const delButton4 = document.getElementById("delete-button4");
-const delButton5 = document.getElementById("delete-button5");
-const delButton6 = document.getElementById("delete-button6");
+
+
+const table=document.getElementById("table");
+
+
 // console.log(delButton1.parentElement.parentElement)
 
+window.addEventListener("DOMContentLoaded",function(){
+  tableData(users);
+});
 
+function tableData(names){
+  let newData= names.map(function(name){
+    return ` <tbody>
+    <tr>
+        <th scope="row">${name.id}</th>
+        <td>${name.name}</td>
+        <td>${name.username}</td>
+        <td>${name.contact}</td>
+        <td><button type="button" class="btn btn-secondary delete-button" id="delete-button" onclick="show(this)">Delete</button></td>
+        <td><button type="button" class="btn btn-secondary" onclick="showModal()">Edit</button></td>
+    </tr>
+    </tbody>`;
+  })
+  newData=newData.join("");
+  table.innerHTML=newData;
+}
+
+const delButton = document.querySelectorAll(".delete-button");
+console.log(delButton);
 function show(){
     modal.style.display="block";
    
@@ -23,8 +81,9 @@ function hide(){
 }
 
 function notify(){
-    alert("succesfully deleted");
-    modal.style.display="none";
+ 
+    
+    
 }
 function showModal(){
     registerPanel.style.display="block";
