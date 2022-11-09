@@ -355,7 +355,7 @@ nav{
     width: 10px;
     background: none;
     color: black;
-    margin-left: 90%;
+    margin-left: 95%;
 }
 .contact .right .register-panel input[type="text"]{
     width: 70%;
@@ -378,6 +378,9 @@ nav{
     background-color: #023047;
     color: white;
     margin-top: 10px;
+    margin-left: 15%;
+}
+.contact .right .register-panel p{
     margin-left: 10%;
 }
 

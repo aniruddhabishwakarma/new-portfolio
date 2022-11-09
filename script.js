@@ -32,7 +32,7 @@ submit.disabled = true;
 uname.addEventListener("change",enableSubmit);
 
 function enableSubmit(){
-    if(uname.value.length=="" || uname.value==null){
+    if(uname.value==null){
         submit.disabled=true;
     } else{
         submit.disabled=false;

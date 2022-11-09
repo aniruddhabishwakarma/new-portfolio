@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://allthatsinteresting.com/wordpress/wp-content/uploads/2013/09/interesting-pictures-of-clouds.jpg);
+    background-size:cover;
+    max-height: 100vh;
+}
+.form{
+    width: 350px;
+    height: 250px;
+    background-color: rgba(111, 122, 139, 0.7);
+   margin: 160px auto;
+   border-radius: 50px;
+}
+.form h3{
+    text-align: center;
+    padding-top: 10px;
+}
+.form input[type="text"],input[type="password"]{
+    text-align: center;
+}
+.form button{
+    margin-left:130px;
+    width: 80px;
+}
