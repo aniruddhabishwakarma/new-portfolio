@@ -18,164 +18,204 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="sidebar">
-            <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
-                alt="">
-            <p>Ram Bahadur</p>
-            <ul>
-                <li><a href="#home"><i class="bi bi-house-door"></i> Home</a></li>
-                <li><a href="#users"><i class="bi bi-people"></i> Users</a></li>
-                <li><a href="#notifications"><i class="bi bi-bell-fill"></i> Notifications</a></li>
-                <li><a href="#settings"><i class="bi bi-gear-fill"></i> Settings</a></li>
-                <li><a href="index.html"> Logout</a></li>
+    <div id="mySidebar" class="sidebar">
+        <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+            alt="">
+        <p>Ram Bahadur</p>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#home"><i class="bi bi-house-door"></i> Home</a>
+        <a href="#users"><i class="bi bi-people"></i> Users</a>
+        <a href="#notifications"><i class="bi bi-bell-fill"></i> Notifications</a>
+        <a href="#settings"><i class="bi bi-gear-fill"></i> Settings</a>
+        <a href="index.html">Logout</a>
 
+        <div class="icons">
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-twitter"></i></a>
             </ul>
-
-            <div class="icons">
-
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-twitter"></i></a>
-                </ul>
-            </div>
         </div>
     </div>
-    <section class="home" id="home">
-        <div class="row first">
-            <div class="col-sm-3">
-                <div class="clicks">
-                    <h3>1210</h3>
-                    <p>Page Clicks Today</p>
+        
+    <div id="main">
+        <button class="openbtn" id="openbtn" onclick="openNav()">&#9776;</button>
+        <section class="home" id="home">
+            <div class="row first">
+                <div class="col-sm-3">
+                    <div class="clicks">
+                        <h3>1210</h3>
+                        <p>Page Clicks Today</p>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="views">
+                        <h3>5100</h3>
+                        <p>Page Views Today</p>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="reg">
+                        <h3>10</h3>
+                        <p>Users Added</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="orders">
+                        <h3>40</h3>
+                        <p>work pending</p>
+                    </div>
+                </div>
+                <div class="row second">
+                    <div class="col-sm-4">
+                        <img src="https://www.xara.com/wp-content/uploads/2020/09/uncategorized-11342.png" alt="">
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="https://img.freepik.com/free-vector/pie-chart-infographic_23-2147495005.jpg?w=2000"
+                            alt="">
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="https://images.squarespace-cdn.com/content/v1/55b6a6dce4b089e11621d3ed/1585087896250-R3GZ6OFWYQRZUJRCJU3D/produce_monthly.png"
+                            alt="">
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-3">
-                <div class="views">
-                    <h3>5100</h3>
-                    <p>Page Views Today</p>
+        </section>
+        <section class="users" id="users">
+            <div id="overlay">
+            </div>
+            <h2>Users</h2>
+            <div class="hello bg-dark" id="modal">
+                <button class="close" onclick="hide()">X</button>
+                <h5 style="color:white;"><i class="bi bi-question-diamond"></i> Are your sure you want to delete?</h5>
+                <div class="options">
+                    <button onclick="notify(this)">Yes</button>
+                    <button onclick="hide()">No</button>
+                    <button onclick="hide()">Cancel</button>
                 </div>
             </div>
-            <div class="col-sm-3">
-                <div class="reg">
-                    <h3>10</h3>
-                    <p>Users Added</p>
+            <div class="register-panel animate__animated animate__fadeInDown" id="register">
+                <button class="button-close" id="button-close" onclick="hideModal(this)">X</button>
+                <h1 style="text-align: center; padding-top: 10px;">Edit Information</h1>
+                <hr class="w-75 mb-4" style="margin-left:10%;">
+                <input type="text" placeholder="Mobile Number or Email">
+                <input type="text" placeholder="FullName">
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <button id="edit"onclick="message()">Edit</button>
+             </div>
+            <div class="user-table table-responsive">
+                <div class="tables mt-5">
+                    <table class="table" id="table">
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Aniruddha Bishwakarma</td>
+                                <td>aniruddha123</td>
+                                <td>9864995686</td>
+                                <td><button type="button" class="btn btn-secondary delete-button" id="delete-button1" onclick="show(this)">Delete</button></td>
+                                <td><button type="button" class="btn btn-secondary" onclick="showModal()">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Aniruddha Bishwakarma</td>
+                                <td>aniruddha123</td>
+                                <td>9864995686</td>
+                                <td><button type="button" class="btn btn-secondary delete-button" id="delete-button2" onclick="show(this)">Delete</button></td>
+                                <td><button type="button" class="btn btn-secondary" onclick="showModal()">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Aniruddha Bishwakarma</td>
+                                <td>aniruddha123</td>
+                                <td>9864995686</td>
+                                <td><button type="button" class="btn btn-secondary delete-button" id="delete-button3" onclick="show(this)">Delete</button></td>
+                                <td><button type="button" class="btn btn-secondary" onclick="showModal()">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Aniruddha Bishwakarma</td>
+                                <td>aniruddha123</td>
+                                <td>9864995686</td>
+                                <td><button type="button" class="btn btn-secondary delete-button" id="delete-button4" onclick="show(this)">Delete</button></td>
+                                <td><button type="button" class="btn btn-secondary" onclick="showModal()">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Aniruddha Bishwakarma</td>
+                                <td>aniruddha123</td>
+                                <td>9864995686</td>
+                                <td><button type="button" class="btn btn-secondary delete-button" id="delete-button5" onclick="show(this)">Delete</button></td>
+                                <td><button type="button" class="btn btn-secondary" onclick="showModal()">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Aniruddha Bishwakarma</td>
+                                <td>aniruddha123</td>
+                                <td>9864995686</td>
+                                <td><button type="button" class="btn btn-secondary delete-button" id="delete-button6" onclick="show(this)">Delete</button></td>
+                                <td><button type="button" class="btn btn-secondary" onclick="showModal()">Edit</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
-            <div class="col-3">
-                <div class="orders">
-                    <h3>40</h3>
-                    <p>work pending</p>
-                </div>
-            </div>
-            <div class="row second">
-                <div class="col-sm-4">
-                    <img src="https://www.xara.com/wp-content/uploads/2020/09/uncategorized-11342.png" alt="">
-                </div>
-                <div class="col-sm-4">
-                    <img src="https://img.freepik.com/free-vector/pie-chart-infographic_23-2147495005.jpg?w=2000"
-                        alt="">
-                </div>
-                <div class="col-sm-4">
-                    <img src="https://images.squarespace-cdn.com/content/v1/55b6a6dce4b089e11621d3ed/1585087896250-R3GZ6OFWYQRZUJRCJU3D/produce_monthly.png"
-                        alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="users" id="users">
-        <div id="overlay">
-        </div>
-        <h2>Users</h2>
-        <div class="hello bg-dark" id="modal">
-            <button class="close" onclick="hide()">X</button>
-            <h5 style="color:white;"><i class="bi bi-question-diamond"></i> Are your sure you want to delete?</h5>
-            <div class="options">
-                <button onclick="notify(this)">Yes</button>
-                <button onclick="hide()">No</button>
-                <button onclick="hide()">Cancel</button>
-            </div>
-        </div>
-        <div class="register-panel animate__animated animate__fadeInDown" id="register">
-            <button class="button-close" id="button-close" onclick="hideModal(this)">X</button>
-            <h1 style="text-align: center; padding-top: 10px;">Edit Information</h1>
-            <hr class="w-75 mb-4" style="margin-left:10%;">
-            <input type="text" placeholder="Mobile Number or Email">
-            <input type="text" placeholder="FullName">
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
-            <button id="edit"onclick="message()">Edit</button>
-         </div>
-        <div class="user-table table-responsive">
-            <div class="tables mt-5">
-                <table class="table" id="table">
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Aniruddha Bishwakarma</td>
-                            <td>aniruddha123</td>
-                            <td>9864995686</td>
-                            <td><button type="button" class="btn btn-secondary delete-button" id="delete-button1" onclick="show(this)">Delete</button></td>
-                            <td><button type="button" class="btn btn-secondary" onclick="showModal()">Edit</button></td>
-                        </tr>
+        </section>
+        <section id = "notifications" class = "notifications">
+            <h1>Notifications</h1>
+            <div class="notifiers">
+                <div>
+                    <p><span><img src="https://images.unsplash.com/photo-1544168190-79c17527004f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80" alt=""></span>A New User has been added</p>
                        
-                    </tbody>
-                </table>
+                </div>
+                <div>
+                    <p> <span><img src="https://images.unsplash.com/photo-1544168190-79c17527004f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80" alt=""></span>A User changed their password.</p>   
+                </div>
+                <div>
+                    <p><span><img src="https://images.unsplash.com/photo-1544168190-79c17527004f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80" alt=""></span>A User changed profile picture.</p>   
+                </div>
+                <div>
+                    <p><span><img src="https://images.unsplash.com/photo-1544168190-79c17527004f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80" alt=""></span>A User viewed the website.</p>   
+                </div>
+                <div>
+                    <p><span><img src="https://images.unsplash.com/photo-1544168190-79c17527004f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80" alt=""></span> A User wants to join our system.<span><button type="button" id="approve1" onclick="approved()" class="btn btn-light ms-2">Approve</button> </span></p>   
+                </div>
             </div>
-    </section>
-    <section id = "notifications" class = "notifications">
-        <h1>Notifications</h1>
-        <div class="notifiers">
-            <div>
-                <p><span><img src="https://images.unsplash.com/photo-1544168190-79c17527004f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80" alt=""></span>A New User has been added</p>
-                   
+        </section>
+        <section id="settings" class="settings bg-dark text-light">
+            <div class="setting-heading bg-dark text-light">
+                <h1>General Profile Settings</h1>
             </div>
-            <div>
-                <p> <span><img src="https://images.unsplash.com/photo-1544168190-79c17527004f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80" alt=""></span>A User changed their password.</p>   
-            </div>
-            <div>
-                <p><span><img src="https://images.unsplash.com/photo-1544168190-79c17527004f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80" alt=""></span>A User changed profile picture.</p>   
-            </div>
-            <div>
-                <p><span><img src="https://images.unsplash.com/photo-1544168190-79c17527004f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80" alt=""></span>A User viewed the website.</p>   
-            </div>
-            <div>
-                <p><span><img src="https://images.unsplash.com/photo-1544168190-79c17527004f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80" alt=""></span> A User wants to join our system.<span><button type="button" id="approve1" onclick="approved()" class="btn btn-light ms-2">Approve</button> </span></p>   
-            </div>
-        </div>
-    </section>
-    <section id="settings" class="settings bg-dark text-light">
-        <div class="setting-heading bg-dark text-light">
-            <h1>General Profile Settings</h1>
-        </div>
-        <table class="table">
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Name</td>
-                <td>Aniruddha Bishwakarma</td>
-                <td><a href="#">Edit</a></td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Username</td>
-                <td>aniruddha123</td>
-                <td><a href="#">Edit</a></td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Contact No.</td>
-                <td>9864995696</td>
-                <td><a href="#">Edit</a></td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Password</td>
-                <td>**********</td>
-                <td><a href="#">Edit</a></td>
-              </tr>
-            </tbody>
-          </table>
-   </section>
+            <table class="table">
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Name</td>
+                    <td>Aniruddha Bishwakarma</td>
+                    <td><a href="#">Edit</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Username</td>
+                    <td>aniruddha123</td>
+                    <td><a href="#">Edit</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Contact No.</td>
+                    <td>9864995696</td>
+                    <td><a href="#">Edit</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Password</td>
+                    <td>**********</td>
+                    <td><a href="#">Edit</a></td>
+                  </tr>
+                </tbody>
+              </table>
+       </section>
+       
+    </div>
+    
 </body>
 
 </html>

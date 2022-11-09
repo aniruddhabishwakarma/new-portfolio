@@ -35,11 +35,26 @@ const users= [{
   contact:'9828558126',
 }];
 
+function openNav() {
+  document.getElementById("mySidebar").style.width = "200px";
+  document.getElementById("main").style.marginLeft = "200px";
+  document.getElementById("openbtn").style.display = "none";
+
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.getElementById("openbtn").style.display = "block";
+}
 
 const modal= document.getElementById("modal");
 const overlay= document.getElementById("#overlay");
-const registerPanel = document.getElementById("register");
+const registerPanel1 = document.getElementById("register");
 const approve = document.getElementById("approve1");
+
+
 
 
 
@@ -48,26 +63,25 @@ const table=document.getElementById("table");
 
 // console.log(delButton1.parentElement.parentElement)
 
-window.addEventListener("DOMContentLoaded",function(){
-  tableData(users);
-});
+// window.addEventListener("DOMContentLoaded",function(){
+//   tableData(users);
+// });
 
-function tableData(names){
-  let newData= names.map(function(name){
-    return ` <tbody>
-    <tr>
-        <th scope="row">${name.id}</th>
-        <td>${name.name}</td>
-        <td>${name.username}</td>
-        <td>${name.contact}</td>
-        <td><button type="button" class="btn btn-secondary delete-button" id="delete-button" onclick="show(this)">Delete</button></td>
-        <td><button type="button" class="btn btn-secondary" onclick="showModal()">Edit</button></td>
-    </tr>
-    </tbody>`;
-  })
-  newData=newData.join("");
-  table.innerHTML=newData;
-}
+// function tableData(names){
+//   let newData= names.map(function(name){
+//     return `
+//     <tr>
+//         <th scope="row">${name.id}</th>
+//         <td>${name.name}</td>
+//         <td>${name.username}</td>
+//         <td>${name.contact}</td>
+//         <td><button type="button" class="btn btn-secondary delete-button" id="delete-button" onclick="show(this)">Delete</button></td>
+//         <td><button type="button" class="btn btn-secondary" onclick="showModal()">Edit</button></td>
+//     </tr>`;
+//   })
+//   newData=newData.join("");
+//   table.innerHTML=newData;
+// }
 
 const delButton = document.querySelectorAll(".delete-button");
 console.log(delButton);
@@ -81,19 +95,17 @@ function hide(){
 }
 
 function notify(){
- 
-    
-    
+  
 }
 function showModal(){
-    registerPanel.style.display="block";
+    registerPanel1.style.display="block";
 }
 function hideModal(){
-    registerPanel.style.display="none";
+    registerPanel1.style.display="none";
 }
 function message(){
     alert("Edit Succesful");
-    registerPanel.style.display="none"; 
+    registerPanel1.style.display="none"; 
 }
 function approved(){
     alert("succesfully approved");
@@ -103,7 +115,7 @@ function approved(){
     
 }
 const sections = document.querySelectorAll("section[id]");
-console.log(sections);
+// console.log(sections);
 
 // Add an event listener listening for scroll
 window.addEventListener("scroll", navHighlighter);
