@@ -63,25 +63,25 @@ const table=document.getElementById("table");
 
 // console.log(delButton1.parentElement.parentElement)
 
-window.addEventListener("DOMContentLoaded",function(){
-  tableData(users);
-});
+// window.addEventListener("DOMContentLoaded",function(){
+//   tableData(users);
+// });
 
-function tableData(names){
-  let newData= names.map(function(name){
-    return `
-    <tr>
-        <th scope="row">${name.id}</th>
-        <td>${name.name}</td>
-        <td>${name.username}</td>
-        <td>${name.contact}</td>
-        <td><button type="button" class="btn btn-secondary delete-button" id="delete-button" onclick="show(this)">Delete</button></td>
-        <td><button type="button" class="btn btn-secondary" onclick="showModal()">Edit</button></td>
-    </tr>`;
-  })
-  newData=newData.join("");
-  table.innerHTML=newData;
-}
+// function tableData(names){
+//   let newData= names.map(function(name){
+//     return `
+//     <tr>
+//         <th scope="row">${name.id}</th>
+//         <td>${name.name}</td>
+//         <td>${name.username}</td>
+//         <td>${name.contact}</td>
+//         <td><button type="button" class="btn btn-secondary delete-button" id="delete-button" onclick="show(this)">Delete</button></td>
+//         <td><button type="button" class="btn btn-secondary" onclick="showModal()">Edit</button></td>
+//     </tr>`;
+//   })
+//   newData=newData.join("");
+//   table.innerHTML=newData;
+// }
 
 const delButton = document.querySelectorAll(".delete-button");
 console.log(delButton);
@@ -89,7 +89,16 @@ function show(){
     modal.style.display="block";
    
 }
+function deleteRow(r) {
+  var i = r.parentNode.parentNode.rowIndex;
 
+  var result = confirm("Are you sure to delete the User?");
+
+  if(result){
+    document.getElementById("table").deleteRow(i);
+  }
+
+}
 function hide(){
     modal.style.display="none";
 }

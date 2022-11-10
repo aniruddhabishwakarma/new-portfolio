@@ -1,0 +1,180 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+    
+   
+}
+.header{
+    overflow: hidden;
+}
+.header img{
+    height: 50px;
+    width: 40px;
+    position: absolute;
+    top:10px;
+    left:20px;
+    border-radius: 50%;
+}
+.header h1{
+   text-align: center;
+   padding-top: 15px;
+   background-color: rgba(79, 87, 79,0.9);
+   padding-bottom: 10px;
+   color:white;
+}
+.services{
+   
+    background-color: rgba(159, 174, 165,0.4);
+    height:100vh;
+}
+.cards{
+    height:90vh;
+    display: flex;
+    /* background-color: yellow; */
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+/* .cards .card{
+    height: 400px;
+    width: 300px;
+    background-color: rgba(73, 79, 76, 0.4);
+    margin-top: 60px;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgba(159, 174, 165,0.8);
+    padding-bottom: 10px;
+}
+.cards .card img{
+    height: 80%;
+    border-radius: 10px;
+}
+.cards .card h3{
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: light;
+    font-size: 20px;
+    overflow: hidden;
+
+}
+.cards .card button{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    border: 1px solid white;
+    background: transparent;
+    
+} */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    margin-top: 8%;
+    
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  .flip-card-front h3{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+    
+  }
+  
+  .flip-card-back {
+    background-color: white;
+    color: white;
+    transform: rotateY(180deg);
+    font-size: 20px;
+    color: black;
+    padding: 20px;
+  }
+  .flip-card-back img{
+    height:100px;
+    width: 150px;
+  }
+
+.register{
+    height: auto;
+    background-color: rgba(71, 67, 67, 0.1);
+    overflow-x: hidden;
+}
+
+.register .left img {
+  height: 430px;
+  width: 100%;
+}
+.register .right{
+   
+    background-color: rgba(36, 35, 35, 0.1);
+}
+form{
+    width: 500px;
+    height: auto;
+   background-color: rgba(252,251,248,0.7);
+    padding: 20px;
+    margin: auto;
+    margin-top: 2%;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+form h1{
+    text-align: center;
+    margin-bottom: 20px;
+    overflow-y: hidden;
+}
+
+@media only screen and (max-width: 600px){
+    .services{
+        height:100%;
+    }
+    .cards{
+        height:auto;
+    }
+    .register{
+        padding: 10px;
+    }
+    .register form{
+        width:100%;
+        margin-top: 80px;
+        border: 1px solid black;
+        background-color: rgba(159, 158, 145, 0.7);
+        border-radius: 10px;
+        padding: 10px;
+
+    }
+    .register form h1{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
